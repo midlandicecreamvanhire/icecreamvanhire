@@ -11,7 +11,30 @@
 <meta name="description" content="Ice Cream Van Hire for parties, communions, school events, weddings and corporate events across the Midlands.">
 
 <style>
+  
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
 
+.menu-item{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.menu-item:hover{
+transform:translateY(-5px);
+}
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
 body{
 margin:0;
 font-family:Arial;
