@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -10,41 +11,38 @@
 <meta name="description" content="Ice Cream Van Hire for parties, communions, school events, weddings and corporate events across the Midlands.">
 
 <style>
-  
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-<img id="lightbox-img">
-</div>
-  
+
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 background:#fffaf2;
-color:#333
+color:#333;
+line-height:1.6
 }
 
 header{
 background:linear-gradient(90deg,#ff2fa3,#ffcc00,#00d4ff);
-padding:30px;
+padding:25px;
 text-align:center;
 color:white
 }
 
 nav{
 background:#222;
-padding:15px;
+padding:12px;
 text-align:center
 }
 
 nav a{
 color:white;
-margin:0 15px;
+margin:0 12px;
 text-decoration:none;
 font-weight:bold
 }
 
 .hero{
-height:85vh;
-background:url('mrwhippy-van.jpg') center/cover no-repeat;
+height:90vh;
+background:url('van-event.jpg') center/cover no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -61,35 +59,39 @@ top:0;
 left:0;
 right:0;
 bottom:0;
-background:rgba(0,0,0,0.4)
+background:rgba(0,0,0,0.45)
 }
 
-.hero h2,
+.hero h1,
 .hero p,
 .hero a{
 position:relative;
 z-index:2
 }
 
-.hero h2{
-font-size:56px
+.hero h1{
+font-size:60px;
+margin-bottom:10px
+}
+
+.hero p{
+font-size:22px
 }
 
 .btn{
 background:#ff0066;
 color:white;
-padding:18px 36px;
+padding:18px 35px;
 border-radius:40px;
 text-decoration:none;
 font-size:20px;
-margin-top:20px;
+margin-top:15px;
 display:inline-block;
 transition:0.3s
 }
 
 .btn:hover{
-background:#d60056;
-transform:scale(1.05)
+background:#d60056
 }
 
 .section{
@@ -99,10 +101,10 @@ margin:auto;
 text-align:center
 }
 
-.cards{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px
+gap:25px
 }
 
 .card{
@@ -112,93 +114,20 @@ border-radius:12px;
 box-shadow:0 6px 15px rgba(0,0,0,0.1)
 }
 
-.gallery-container{
-position:relative;
-max-width:900px;
-margin:auto;
-}
-
-.arrow{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:rgba(0,0,0,0.5);
-color:white;
-border:none;
-font-size:30px;
-padding:10px 15px;
-cursor:pointer;
-border-radius:6px;
-}
-
-.arrow.left{
-left:10px;
-}
-
-.arrow.right{
-right:10px;
-}
-
-.arrow:hover{
-background:black;
-}
-
-.lightbox{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:1000;
-}
-
-.lightbox img{
-max-width:90%;
-max-height:90%;
-border-radius:10px;
-}
-
-.slide{
-display:none;
+.gallery img{
 width:100%;
 border-radius:12px
 }
 
-.slide.active{
-display:block
-}
-
-.contact{
-background:#fff6d8
-}
-
-form input,form textarea,form select{
-width:90%;
-max-width:500px;
-padding:12px;
-margin:8px;
-border-radius:6px;
-border:1px solid #ccc
-}
-
-form button{
-background:#ff0066;
-color:white;
-padding:14px 26px;
-border:none;
-border-radius:8px;
-font-size:18px
+.steps{
+background:#ffe4a6
 }
 
 footer{
 background:#222;
 color:white;
 text-align:center;
-padding:30px
+padding:25px
 }
 
 .floating-call{
@@ -207,10 +136,9 @@ bottom:20px;
 right:20px;
 background:#ff0066;
 color:white;
-padding:16px 22px;
+padding:16px 20px;
 border-radius:40px;
-text-decoration:none;
-font-weight:bold
+text-decoration:none
 }
 
 .floating-whatsapp{
@@ -219,10 +147,9 @@ bottom:80px;
 right:20px;
 background:#25D366;
 color:white;
-padding:16px 22px;
+padding:16px 20px;
 border-radius:40px;
-text-decoration:none;
-font-weight:bold
+text-decoration:none
 }
 
 </style>
@@ -232,8 +159,8 @@ font-weight:bold
 <body>
 
 <header>
-<h1>🍦 Midland Ice Cream Van Hire</h1>
-<p>Parties • Communions • Schools • Weddings • Corporate Events</p>
+<h2>🍦 Midland Ice Cream Van Hire</h2>
+<p>Serving the Midlands</p>
 </header>
 
 <nav>
@@ -245,35 +172,50 @@ font-weight:bold
 
 <section class="hero">
 
-<h2>Delicious Mr Whippy Ice Cream</h2>
-<p>Bring the Ice Cream Van to Your Event</p>
+<h1>Ice Cream Van Hire for Parties & Communions</h1>
 
-<a class="btn" href="tel:0894242026">📞 Call 089 424 2026</a>
+<p>Fresh Mr Whippy ice cream for events across the Midlands</p>
+
+<a class="btn" href="tel:0894242026">Call Now</a>
+
+<a class="btn" href="#contact">Book the Van</a>
 
 </section>
 
-<section class="section" style="background:#ffe4a6">
+<section class="section steps">
 
-<h2>⛪ Communion Party Ice Cream Van</h2>
+<h2>How Booking Works</h2>
 
-<p>
-Make your child's communion celebration extra special with fresh Mr Whippy ice cream.
-Book the ice cream van for your communion party today.
-</p>
+<div class="grid">
 
-<a class="btn" href="tel:0894242026">Book the Van</a>
+<div class="card">
+<h3>1️⃣ Book Your Date</h3>
+<p>Call or send a booking request.</p>
+</div>
+
+<div class="card">
+<h3>2️⃣ We Arrive</h3>
+<p>The ice cream van arrives at your event.</p>
+</div>
+
+<div class="card">
+<h3>3️⃣ Enjoy</h3>
+<p>Guests enjoy fresh Mr Whippy ice cream.</p>
+</div>
+
+</div>
 
 </section>
 
 <section id="about" class="section">
 
-<h2>About Us</h2>
+<h2>About Our Ice Cream Van</h2>
 
-<img src="icecream-van-front.jpg">
+<img src="icecream-van-front.jpg" style="max-width:700px;width:100%;border-radius:12px">
 
 <p>
-Midland Ice Cream Van Hire provides delicious Mr Whippy ice cream for birthdays,
-communions, school sports days, weddings and corporate events across the Midlands.
+Midland Ice Cream Van Hire provides delicious Mr Whippy ice cream for birthdays, communions,
+school sports days, weddings and corporate events.
 </p>
 
 </section>
@@ -282,51 +224,30 @@ communions, school sports days, weddings and corporate events across the Midland
 
 <h2>Events We Cater For</h2>
 
-<div class="cards">
+<div class="grid">
 
-<div class="card">
-<h3>🎉 Birthday Parties</h3>
-</div>
-
-<div class="card">
-<h3>⛪ Communions</h3>
-</div>
-
-<div class="card">
-<h3>🏫 School Events</h3>
-</div>
-
-<div class="card">
-<h3>💒 Weddings</h3>
-</div>
-
-<div class="card">
-<h3>🏢 Corporate Events</h3>
-</div>
-
-<div class="card">
-<h3>🎪 Festivals</h3>
-</div>
+<div class="card">🎉 Birthday Parties</div>
+<div class="card">⛪ Communions</div>
+<div class="card">🏫 School Events</div>
+<div class="card">💒 Weddings</div>
+<div class="card">🏢 Corporate Events</div>
+<div class="card">🎪 Festivals</div>
 
 </div>
 
 </section>
-  
+
 <section id="gallery" class="section">
 
 <h2>Our Ice Cream Van</h2>
 
-<div class="gallery-container">
+<div class="grid gallery">
 
-<button class="arrow left" onclick="prevSlide()">❮</button>
+<img src="van-event.jpg">
 
-<img class="slide" src="van-event.jpg" onclick="openLightbox(this.src)">
+<img src="icecream-van-front.jpg">
 
-<img class="slide" src="icecream-van-front.jpg" onclick="openLightbox(this.src)">
-
-<img class="slide" src="mrwhippy-van.jpg" onclick="openLightbox(this.src)">
-
-<button class="arrow right" onclick="nextSlide()">❯</button>
+<img src="mrwhippy-van.jpg">
 
 </div>
 
@@ -336,40 +257,31 @@ communions, school sports days, weddings and corporate events across the Midland
 
 <h2>Customer Reviews</h2>
 
-<div class="cards">
+<div class="grid">
 
-<div class="card">
-⭐⭐⭐⭐⭐  
-Fantastic service at our communion party.
-</div>
+<div class="card">⭐⭐⭐⭐⭐<br>Fantastic service at our communion.</div>
 
-<div class="card">
-⭐⭐⭐⭐⭐  
-The ice cream van was the highlight of the birthday party.
-</div>
+<div class="card">⭐⭐⭐⭐⭐<br>The kids loved the ice cream van.</div>
 
-<div class="card">
-⭐⭐⭐⭐⭐  
-Great at our school sports day.
-</div>
+<div class="card">⭐⭐⭐⭐⭐<br>Great at our school sports day.</div>
 
 </div>
 
 </section>
 
-<section id="contact" class="section contact">
+<section id="contact" class="section">
 
 <h2>Book the Ice Cream Van</h2>
 
 <form action="https://formspree.io/f/xnjgpgov" method="POST">
 
-<input type="text" name="Name" placeholder="Your Name" required>
+<input type="text" name="Name" placeholder="Your Name" required><br>
 
-<input type="tel" name="Phone" placeholder="Phone Number" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required><br>
 
-<input type="text" name="Location" placeholder="Event Location" required>
+<input type="text" name="Location" placeholder="Event Location" required><br>
 
-<input type="date" name="Event Date" required>
+<input type="date" name="Event Date" required><br>
 
 <select name="Event Type">
 
@@ -379,9 +291,9 @@ Great at our school sports day.
 <option>Wedding</option>
 <option>Corporate Event</option>
 
-</select>
+</select><br>
 
-<textarea name="Details" placeholder="Extra details"></textarea>
+<textarea name="Details" placeholder="Extra details"></textarea><br>
 
 <button type="submit">Send Booking Request</button>
 
@@ -389,71 +301,17 @@ Great at our school sports day.
 
 </section>
 
-<section class="section">
-
-<h2>Where We Cover</h2>
-
-<iframe
-width="100%"
-height="350"
-style="border:0"
-loading="lazy"
-allowfullscreen
-src="https://maps.google.com/maps?q=midlands%20ireland&t=&z=8&ie=UTF8&iwloc=&output=embed">
-</iframe>
-
-</section>
-
 <footer>
 
-<h3>Midland Ice Cream Van Hire</h3>
-
-<p>
-Birthdays • Communions • Schools • Weddings • Corporate Events
-</p>
-
+<p>Midland Ice Cream Van Hire</p>
 <p>📞 089 424 2026</p>
-
-<p>Serving the Midlands Westmeath Meath Offaly Longford Dublin Roscommon</p>
+<p>Serving Westmeath • Meath • Offaly • Longford • Dublin  and Surrounding areas</p>
 
 </footer>
 
-<a class="floating-call" href="tel:0894242026">📞 Call</a>
+<a class="floating-call" href="tel:0894242026">Call</a>
 
 <a class="floating-whatsapp" href="https://wa.me/353894242026">WhatsApp</a>
-
-<script>
-
-let slides=document.querySelectorAll(".slide")
-let i=0
-
-function showSlide(){
-slides.forEach(s=>s.classList.remove("active"))
-slides[i].classList.add("active")
-}
-
-function nextSlide(){
-i=(i+1)%slides.length
-showSlide()
-}
-
-function prevSlide(){
-i=(i-1+slides.length)%slides.length
-showSlide()
-}
-
-setInterval(nextSlide,4000)
-
-function openLightbox(src){
-document.getElementById("lightbox-img").src=src
-document.getElementById("lightbox").style.display="flex"
-}
-
-function closeLightbox(){
-document.getElementById("lightbox").style.display="none"
-}
-
-</script>
 
 </body>
 </html>
