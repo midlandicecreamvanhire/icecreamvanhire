@@ -10,7 +10,11 @@
 <meta name="description" content="Ice Cream Van Hire for parties, communions, school events, weddings and corporate events across the Midlands.">
 
 <style>
-
+  
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
+</div>
+  
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
@@ -108,10 +112,54 @@ border-radius:12px;
 box-shadow:0 6px 15px rgba(0,0,0,0.1)
 }
 
-.gallery{
+.gallery-container{
+position:relative;
 max-width:900px;
 margin:auto;
-position:relative
+}
+
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+font-size:30px;
+padding:10px 15px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.arrow.left{
+left:10px;
+}
+
+.arrow.right{
+right:10px;
+}
+
+.arrow:hover{
+background:black;
+}
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
 }
 
 .slide{
@@ -263,21 +311,22 @@ communions, school sports days, weddings and corporate events across the Midland
 </div>
 
 </section>
-
+  
 <section id="gallery" class="section">
 
 <h2>Our Ice Cream Van</h2>
 
-<div class="gallery">
+<div class="gallery-container">
 
-<img class="slide active"
-src="van-event.jpg">
+<button class="arrow left" onclick="prevSlide()">❮</button>
 
-<img class="slide" 
-src="icecream-van-front.jpg">
+<img class="slide active" src="van-event.jpg" onclick="openLightbox(this.src)">
 
-<img class="slide" 
-src="mrwhippy-van.jpg">
+<img class="slide" src="icecream-van-front.jpg" onclick="openLightbox(this.src)">
+
+<img class="slide" src="mrwhippy-van.jpg" onclick="openLightbox(this.src)">
+
+<button class="arrow right" onclick="nextSlide()">❯</button>
 
 </div>
 
@@ -381,10 +430,28 @@ let i=0
 function showSlide(){
 slides.forEach(s=>s.classList.remove("active"))
 slides[i].classList.add("active")
-i=(i+1)%slides.length
 }
 
-setInterval(showSlide,3500)
+function nextSlide(){
+i=(i+1)%slides.length
+showSlide()
+}
+
+function prevSlide(){
+i=(i-1+slides.length)%slides.length
+showSlide()
+}
+
+setInterval(nextSlide,4000)
+
+function openLightbox(src){
+document.getElementById("lightbox-img").src=src
+document.getElementById("lightbox").style.display="flex"
+}
+
+function closeLightbox(){
+document.getElementById("lightbox").style.display="none"
+}
 
 </script>
 
